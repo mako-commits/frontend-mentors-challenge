@@ -7,29 +7,10 @@
 
  body {
      font-family: 'Kumbh Sans', sans-serif;
-     position: relative;
-     overflow: hidden;
      background-color: hsl(185, 75%, 39%);
- }
-
- .top__backdrop {
-     position: absolute;
-     z-index: 1;
-     width: 100%;
-     height: auto;
-     top: -1000px;
-     left: -700px;
-     border: 0px;
- }
-
- .bottom__backdrop {
-     position: absolute;
-     z-index: 1;
-     width: 100%;
-     height: auto;
-     top: 10px;
-     right: -700px;
-     border: 0px;
+     background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+     background-repeat: no-repeat, no-repeat;
+     background-position: right 50vw bottom 50vh, left 50vw top 50vh;
  }
 
  .container {
@@ -40,13 +21,13 @@
  .card {
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
      transition: 0.3s;
-     width: 30%;
+     width: 327px;
      text-align: center;
-     margin: 10% auto 5% auto;
+     margin: 5rem auto 3rem auto;
      background-color: #fff;
      position: relative;
      z-index: 3;
-     border-radius: 10px;
+     border-radius: 16px;
  }
 
  .card:hover {
@@ -62,7 +43,7 @@
  }
 
  .card__location {
-     margin-top: 15px;
+     margin-top: 1rem;
  }
 
  .card__age {
@@ -71,7 +52,7 @@
  }
 
  .card__info {
-     margin-bottom: 17px;
+     margin-bottom: 1rem;
  }
 
  .card__details {
@@ -92,7 +73,7 @@
 
  .pattern {
      background: url(./images/bg-pattern-card.svg);
-     height: 100px;
+     height: 120px;
      border-top-right-radius: 10px;
      border-top-left-radius: 10px;
  }
