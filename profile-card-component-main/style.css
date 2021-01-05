@@ -53,6 +53,10 @@
      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
  }
 
+ .card__divider {
+     color: hsl(227, 10%, 46%);
+ }
+
  .card__name {
      font-weight: 700;
  }
