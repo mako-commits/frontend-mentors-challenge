@@ -134,15 +134,19 @@ body {
     transform: rotate(-45deg);
 }
 
+.navbar-toggler {
+    border: 0px !important;
+}
+
 /* INTRO */
 
 #intro {
     background-color: var(--very-dark-violet);
-    height: 60vh;
+    height: 80vh;
     position: relative;
 }
 
-#intro .intro-main {
+.intro-main {
     color: var(--very-light-gray);
     font-family: 'DM Serif Display', serif;
     font-weight: 400;
@@ -152,15 +156,6 @@ body {
 }
 
 .intro-btn {
-    /* padding: 0.3rem 1.7rem;
-    background: transparent;
-    border: 1px solid var(--very-light-gray);
-    color: var(--very-light-gray);
-    font-family: 'Karla', sans-serif;
-    font-weight: 700;
-    transition: background-color 1s ease-in-out;
-    font-size: 0.9rem;
-    text-transform: uppercase; */
     display: inline-block;
     font-weight: 700;
     line-height: 1.5;
@@ -197,17 +192,77 @@ body {
 }
 
 .intro-img {
-    height: 60vh;
+    height: 80vh;
     /* width: 25vw; */
     position: absolute;
     top: 5rem;
-    right: 15rem
+    right: 10rem;
+}
+
+.bg-pattern-intro-left {
+    position: absolute;
+    top: 18.5rem;
+    left: 0.2rem;
+}
+
+.bg-pattern-intro-right {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
 }
 
 /* 
 @media (max-width: 576px) {
     nav .container {
         width: 100% !important;
+    }
+}
+/* Media query medium to small devices */
+
+@media screen and (max-width:768px) {
+    #intro {
+        background-color: var(--very-dark-violet);
+        height: 70vh;
+        padding: 0;
+        margin: 0;
+    }
+    .intro-img-mobile {
+        width: 100vw;
+        height: 70vh;
+        margin: 0;
+    }
+    .intro-text-area {
+        background-color: var(--very-dark-violet);
+        margin-top: 0;
+        text-align: center;
+        background-image: url("../images/bg-pattern-intro-left-mobile.svg"), url("../images/bg-pattern-intro-right-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 55vw bottom 39vh, left 65vw top 39vh;
+    }
+    .intro-text-area-inner {
+        margin: 7rem 1rem;
+    }
+    .intro-main {
+        color: var(--very-light-gray);
+        font-family: 'DM Serif Display', serif;
+        font-weight: 400;
+        line-height: 2.5rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width:415px) {
+    .intro-text-area {
+        background-color: var(--very-dark-violet);
+        margin-top: 0;
+        text-align: center;
+        background-image: url("../images/bg-pattern-intro-left-mobile.svg"), url("../images/bg-pattern-intro-right-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 59vw bottom 40vh, left 70vw top 39vh;
+    }
+    .intro-text-area-inner {
+        margin: 7rem 1rem;
     }
 }
 
@@ -218,5 +273,3 @@ body {
         width: 100%!important;
     }
 }
-
-*/
