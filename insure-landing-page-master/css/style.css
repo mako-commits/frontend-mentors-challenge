@@ -146,6 +146,14 @@ body {
     position: relative;
 }
 
+.intro-main:before {
+    content: "";
+    display: block;
+    border-bottom: 1px solid var(--very-light-gray);
+    width: 10rem;
+    margin: 2.5rem 0;
+}
+
 .intro-main {
     color: var(--very-light-gray);
     font-family: 'DM Serif Display', serif;
@@ -221,6 +229,31 @@ body {
     margin: 2rem auto;
 }
 
+.about-heading:before {
+    content: "";
+    display: block;
+    border-bottom: 1px solid var(--grayish-blue);
+    width: 10rem;
+    margin: 2.5rem 0;
+}
+
+.about-heading {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.about-info-heading {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+.about-info p {
+    color: var(--grayish-blue);
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
 /* More Section */
 
 #more {
@@ -228,7 +261,7 @@ body {
 }
 
 .more-inner {
-    height: 30vh;
+    height: 40vh;
     background-color: var(--very-dark-violet);
     background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
     background-repeat: no-repeat;
@@ -237,9 +270,13 @@ body {
 
 .more-inner h2 {
     color: var(--very-light-gray);
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 3rem;
 }
 
 .more-btn {
+    margin-top: 2rem;
     display: inline-block;
     font-weight: 700;
     line-height: 1.5;
@@ -282,6 +319,10 @@ body {
     list-style: none;
 }
 
+#mor img:hover {
+    fill: red;
+}
+
 .footer-logo {
     height: 1.5rem;
     width: 5rem;
@@ -295,13 +336,16 @@ body {
     margin: 2rem auto;
 }
 
-.footer-bottom {
-    text-align: center;
-}
-
 .footer-bottom li {
     list-style: none;
     text-transform: uppercase;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
 
 .list-head {
@@ -371,6 +415,18 @@ body {
     }
     .footer-head {
         text-align: center;
+    }
+    .footer-bottom {
+        text-align: center;
+    }
+    .intro-main:before {
+        display: none;
+    }
+    .about-heading:before {
+        margin: 2.5rem auto;
+    }
+    .more-inner {
+        height: 50vh;
     }
     /* .footer-logo {
         display: flex;
