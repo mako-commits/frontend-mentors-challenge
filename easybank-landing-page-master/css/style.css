@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+:root {
+    --clr-white: #fff;
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    /* primary colors */
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    /* Neutrals */
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    background: var(--very-light-gray);
+    /* color: var(--clr-grey-1); */
+    line-height: 1.5;
+    font-size: 0.875rem;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--clr-primary-5);
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1, h2, h3, h4 {
+        line-height: 1;
+    }
+}
+
+/*  global classes */
+
+/* section */
+
+.section {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+    .section {
+        width: 95vw;
+    }
+}
+
+/* 
+========================================================== NAVBAR
+*/
+
+.navbar {
+    z-index: 2;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    margin: 2rem;
+}
+
+.navbar-collapse {
+    background-image: url('../images/bg-intro-mobile.svg');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+/* 
+=============================================================== INTRO
+*/
+
+#intro {
+    position: relative;
+}
+
+.image-area {
+    /* position: absolute; */
+    top: -7rem;
+    order: 0 !important;
+    z-index: 1;
+}
+
+#intro img {
+    top: -2rem;
+    position: relative;
+}
+
+.intro-text-area {
+    /* position: absolute; */
+    top: 25rem;
+    text-align: center;
+    order: 2;
+}
+
+.intro-img {
+    margin: 0 auto;
+    width: 80vw;
+    height: 70vh;
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 100rem;
+}
+
+.intro-btn, .nav-btn, .footer-btn {
+    color: var(--white);
+    border: hidden;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+
+/* 
+==========================================================REASON
+*/
+
+.reason {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--light-grayish-blue);
+    order: 3 !important;
+}
+
+/* 
+===================================================================+ARTICLE
+*/
+
+.article-section {
+    padding: 4rem 0;
+}
+
+.article-body {
+    padding: 1.5rem;
+    background-color: var(--white);
+}
+
+/* 
+====================================================================FOOTER
+*/
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer li {
+    color: var(--very-light-gray);
+}
+
+footer p {
+    color: var(--grayish-blue);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    padding: 0 0.3rem;
+}
+
+.first-link {
+    margin-bottom: 0;
+}
+
+.first-link li, .second-link li {
+    margin: 0.5rem 0;
+}
+
+.second-link {
+    margin-top: 0;
+}
+
+.content {
+    text-align: center;
+}

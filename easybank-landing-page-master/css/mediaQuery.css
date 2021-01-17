@@ -1,0 +1,143 @@
+/* from screen size of ipad to big screen */
+
+@media screen and (min-width: 768px) {
+    /* 
+    ======================================== NAVBAR
+    */
+    .navbar {
+        z-index: 2;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12rem;
+        margin-top: 0;
+    }
+    .nav-btn {
+        margin-left: 15rem;
+    }
+    .navbar-collapse {
+        background-image: none;
+    }
+    /* 
+    =========================================== INTRO
+    */
+    #intro {
+        position: relative;
+    }
+    .mobile-intro {
+        display: none;
+    }
+    .image-area {
+        display: block;
+        position: relative;
+        background-image: url('../images/bg-intro-desktop.svg');
+        background-position: right -1rem top -6rem;
+        top: -2rem;
+        right: -40rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        width: 50vw;
+        z-index: 1;
+        order: 0 !important;
+    }
+    .intro-img {
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        float: right;
+        right: 0;
+        top: 0rem;
+    }
+    .intro-main {
+        font-size: 3rem;
+        line-height: 1;
+    }
+    .intro-text-area {
+        text-align: start;
+        position: absolute;
+        top: 0
+        /* border: 1px solid red; */
+    }
+    .intro-text {
+        position: absolute;
+        top: 6rem
+    }
+    /* 
+    ===================================================REASON
+    */
+    .reason {
+        text-align: start;
+    }
+    /* 
+============================================================FOOTER
+*/
+    footer {
+        text-align: left;
+    }
+    .social-links {
+        padding: 0;
+        display: flex;
+        justify-content: start;
+    }
+    .content {
+        text-align: right;
+    }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media (max-width: 767px) {
+    .navbar-brand img {
+        width: 130px;
+    }
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-toggler .toggler-icon {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    margin: 5px 0;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.navbar-toggler.active .toggler-icon:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 7px;
+}
+
+.navbar-toggler.active .toggler-icon:nth-of-type(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.active .toggler-icon:nth-of-type(3) {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: -7px;
+}
