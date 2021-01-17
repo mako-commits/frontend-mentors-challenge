@@ -69,7 +69,7 @@ h4 {
 
 p {
     margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
+    color: var(--grayish-blue);
 }
 
 @media screen and (min-width: 800px) {
@@ -112,6 +112,10 @@ p {
 /* 
 ========================================================== NAVBAR
 */
+
+nav {
+    background: var(--white) !important;
+}
 
 .navbar {
     z-index: 2;
@@ -176,6 +180,10 @@ p {
     background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
 
+.intro-btn:hover, .nav-btn:hover, .footer-btn:hover {
+    opacity: 0.5;
+}
+
 /* 
 ==========================================================REASON
 */
@@ -185,6 +193,15 @@ p {
     padding: 3rem 0;
     background-color: var(--light-grayish-blue);
     order: 3 !important;
+}
+
+.reason h2 {
+    text-transform: none;
+}
+
+.reason h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 /* 
@@ -198,6 +215,10 @@ p {
 .article-body {
     padding: 1.5rem;
     background-color: var(--white);
+}
+
+.article-title a:hover, footer a:hover {
+    color: var(--lime-green);
 }
 
 /* 
@@ -241,4 +262,8 @@ footer p {
 
 .content {
     text-align: center;
+}
+
+footer path:hover {
+    fill: var(--lime-green);
 }

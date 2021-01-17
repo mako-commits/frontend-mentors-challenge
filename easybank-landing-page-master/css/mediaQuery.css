@@ -4,12 +4,15 @@
     /* 
     ======================================== NAVBAR
     */
+    .navbar a:hover {
+        border-bottom: 3px solid var(--lime-green);
+    }
     .navbar {
         z-index: 2;
     }
     .navbar-nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-left: 12rem;
         margin-top: 0;
@@ -100,11 +103,12 @@
 
 */
 
+/* 
 @media (max-width: 767px) {
     .navbar-brand img {
         width: 130px;
     }
-}
+} */
 
 .navbar-toggler {
     padding: 0;
