@@ -164,12 +164,12 @@ nav {
 
 .intro-img {
     margin: 0 auto;
-    width: 80vw;
-    height: 70vh;
+    width: 90vw;
+    height: 50vh;
     position: absolute;
     float: right;
     right: 0;
-    top: 100rem;
+    top: 90rem;
 }
 
 .intro-btn, .nav-btn, .footer-btn {
