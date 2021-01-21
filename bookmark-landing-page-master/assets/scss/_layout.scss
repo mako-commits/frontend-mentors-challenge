@@ -34,7 +34,7 @@
                 content: "";
                 display: block;
                 border-bottom: 3px solid $grayish-blue;
-                width: 10rem;
+                width: 18rem;
                 margin: 1rem auto;
             }
     
@@ -52,11 +52,16 @@
     &__link{
         transition: .3s;
         color: $white-color;
+        text-transform: uppercase;
+        
+        
         
         &:hover{
+           
             color: $first-color;
         }
     }
+   
     &__toggle{
         font-size: 1.3rem;
         cursor: pointer;
@@ -67,7 +72,19 @@
         border-radius: 0.3rem;
         color: #fff;
         border: 2px solid $white-color;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        
       
+    }
+    &__social-links{
+        display: inline-flex;
+        align-items: center;
+        margin-top: 40%;
+        li{
+            margin-left: 1rem;
+        }
     }
 }
 
@@ -116,10 +133,20 @@
         @extend %button;
         background-color: $first-color;
         color: $white-color;
+        &:hover{
+            background-color: $white-color;
+            border: 1px solid $first-color;
+            color: $first-color;
+        }
     }
     &__second-btn{
         @extend %button;
         color: $text-color;
+         &:hover{
+            background-color: $white-color;
+            border: 1px solid $text-color;
+            color: $text-color;
+        }
     }
 }
 
@@ -127,17 +154,13 @@
 /*========== BUTTONS ==========*/
 %button{
     display: inline-block;
-    // background-color: $first-color;
-    // color: #FFF;
     padding: .75rem 1rem;
     border-radius: .5rem; 
     transition: .3s;
      box-shadow: 0 4px 4px rgba(0,0,0,.1);
     
     
-    // &:hover{
-    //     background-color: var(--first-color-alt);
-    // }
+    
 }
 
 /*========== FEATURES ==========*/
@@ -186,27 +209,19 @@
     &__content {
      grid-template-columns: 1fr;
     text-align: center;
+    }
+    &-border {
+        border-bottom: $second-color 4px solid;  
+    }
+    &-text{
+        color: $text-color;
+    }
+    &-text:hover{
+        color: $second-color;
+    }
 }
-}
-
-
-.tab-border {
-    border-bottom: $second-color 4px solid;
-    
-}
-.tab-text{
-    color: $text-color;
-}
-.tab-text:hover{
-    color: $first-color;
-}
-.tabs--container{
-    display: block;
-}
-
 
 .tabs {
-    // background: $dark-color;
     padding-top: 1rem;
     border-bottom: 3px solid #3d3d3d;
     &--container {
@@ -216,11 +231,9 @@
         text-align: center;
         >div {
             margin: 0 6rem;;
-            padding: 0.2rem;
-            // border: 1px solid red;
+            padding: 0.2rem; 
         }
         >div:hover {
-            // color: #fff;
             cursor: pointer;
         }
     }
@@ -278,7 +291,214 @@
         font-size: 0.7rem;
         color: $white-color;
         background-color: $first-color;
-       
+       &:hover{
+           background-color: $white-color;
+           border: 1px solid $first-color;
+           color: $first-color;
+       }
     }
 }
 
+.faq{
+    margin-top: 7rem;
+    &__heading{
+        text-align: center;
+        color:$text-color
+    }
+    &__paragraph{
+        text-align: center;
+        color: $grayish-blue;
+    }
+    &__btn{
+         @extend %button;
+           margin-top:$mb-3;
+        color: $white-color;
+        background-color: $first-color;
+        justify-content: center;
+        display: flex;
+        width: 9rem;
+        margin: $mb-3 auto;
+       
+    }
+    
+}
+
+
+.accordion {
+    margin-top: $mb-5;
+  .accordion-item {
+    border-bottom: 1px solid $grayish-blue;
+    // button[aria-expanded='true'] {
+    // //   border-bottom: 1px solid blue;
+    // }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: $text-color;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color:$second-color;
+      &::after {
+        cursor: pointer;
+        // color: blue;
+        // border: 1px solid blue;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+       
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+   
+    //   height: 22px;
+    //   border: 1px solid;
+    //   border-radius: 22px;
+      &::before {
+          
+        display: block;
+        position: absolute;
+        content:'';
+        // top: 9px;
+        // left: 5px;
+        // width: 10px;
+        // height: 2px;
+        // background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content:url(../images/icon-arrow.svg);
+         
+        // top: 5px;
+        // left: 9px;
+        // width: 2px;
+        // height: 10px;
+        background: transparent;
+        
+        
+      }
+    }
+
+
+
+  }
+  button[aria-expanded='true'] {
+//    color: $second-color;
+
+    .icon {
+      &::after {
+           transform: rotate(180deg);
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+        color: $grayish-blue;
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+
+
+}
+
+
+
+.contact{
+    background-color: $first-color;
+    padding: 3rem;
+    &__heading, &__paragraph{
+        text-align: center;
+        color: $white-color;
+    }
+    &__form{
+        text-align: center;
+        margin-top: $mb-4;
+       
+    }
+    &__btn{
+        @extend %button;
+        border-radius: 0;
+          padding: .45rem 1rem;
+          background-color: $second-color;
+          border: 0;
+          color: $white-color;
+          cursor: pointer;
+           display: block;
+           margin: 0 auto;
+           width: 80%;
+           &:hover{
+               background-color: $white-color;
+               border: 1px solid $second-color;
+               color: $second-color;
+           }
+    }
+    &__input{
+        height: 2rem;
+         width: 80%;
+         margin-bottom: $mb-2;
+    }
+}
+
+.footer{
+    background-color: $text-color;
+    padding: 1rem;
+    &__container{
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    }
+    &__nav{
+        display: block;
+        text-align: center;
+        margin-bottom: $mb-4;
+        margin-top: $mb-4;
+    }
+    
+    &__social-links{
+        display: flex;
+        justify-content:center;
+       align-items: center;
+       
+    }
+    path:hover{
+           fill:$second-color
+       }
+    li{
+        margin-top: $mb-2;
+    }
+    a{
+        color: $white-color;
+        margin-left: $mb-3;
+        &:hover{
+        color: $second-color;
+    }
+    }
+}
