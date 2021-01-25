@@ -4,7 +4,57 @@
     /* 
     ======================================== NAVBAR
     */
-    .navbar a:hover {
+    body {
+        background: url(../images/bg-intro-desktop.svg) top -220px right -575px no-repeat, var(--very-light-gray);
+        background-size: contain;
+    }
+    header {
+        padding: 0 10.5rem;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header button {
+        display: inline-block;
+        margin: 0;
+    }
+    #hamburger {
+        display: none !important;
+    }
+    #close {
+        display: none !important;
+    }
+    nav {
+        display: block !important;
+        margin: 0;
+        background: var(--white);
+        padding: 0;
+        z-index: 3;
+    }
+    nav a {
+        padding: 0 0 0.2rem 0;
+        margin: 0 1rem;
+        font-size: 1rem;
+        color: var(--grayish-blue);
+        display: inline;
+    }
+    nav a:hover {
+        color: var(--dark-blue);
+        border-bottom: 4px solid hsl(192, 70%, 51%);
+    }
+    #mockup {
+        display: none;
+    }
+    /* #mockup-desktop {
+        display: block;
+        position: relative;
+        top: 20px;
+        right: -188px;
+        object-fit: cover;
+    } */
+    /* .navbar a:hover {
         border-bottom: 3px solid var(--lime-green);
     }
     .navbar {
@@ -22,11 +72,47 @@
     }
     .navbar-collapse {
         background-image: none;
-    }
+    } */
     /* 
     =========================================== INTRO
     */
+    main {
+        background: none !important;
+    }
     #intro {
+        padding: 0 0 0 10rem;
+        height: 656px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+    #mockup {
+        display: none;
+    }
+    #mockup-desktop {
+        display: block;
+        position: relative;
+        top: 20px;
+        right: -158px;
+        object-fit: cover;
+    }
+    #intro div {
+        text-align: left;
+        width: 450px;
+    }
+    #intro h1 {
+        font-size: 3.5rem;
+        margin: 0;
+        font-weight: 300;
+        line-height: 1.2;
+        color: var(--dark-blue);
+        margin-bottom: 1rem;
+    }
+    #intro p {
+        font-size: 1.3rem;
+    }
+    /* #intro {
         position: relative;
     }
     .mobile-intro {
@@ -62,12 +148,12 @@
         text-align: start;
         position: absolute;
         top: 0
-        /* border: 1px solid red; */
+        
     }
     .intro-text {
         position: absolute;
         top: 6rem
-    }
+    } */
     /* 
     ===================================================REASON
     */
